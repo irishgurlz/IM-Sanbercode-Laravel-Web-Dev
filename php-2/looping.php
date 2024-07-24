@@ -104,20 +104,16 @@
             ['003', 'Mouse Genius', 50000, 'Mouse Genius biar lebih pinter', 'genius.jpeg'],
             ['004', 'Mouse Jerry', 30000, 'Mouse yang disukai kucing', 'jerry.jpeg']
         ];
-        
-        // Output: 
-        $lenItems = count($items);
-        for ($i = 0; $i < $lenItems; $i++){
-            for ($j = 0; $j < $lenItems; $j++){
-                $data = array ("id" => $items[$i][0],
-                        "name" => $items[$i][1],
-                        "price" => $items[$i][2],
-                        "description" => $items[$i][3],
-                        "source" => $items[$i][4]
+
+        foreach ($items as $item){
+            $data = array ("id" => $item[0],
+                        "name" => $item[1],
+                        "price" => $item[2],
+                        "description" => $item[3],
+                        "source" => $item[4]
                         );
-                }
-                print_r($data);
-                echo "<br>";
+            print_r($data);
+            echo "<br>";
         }
         
         echo "<h3>Soal No 4 Asterix </h3>";
